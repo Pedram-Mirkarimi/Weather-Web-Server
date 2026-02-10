@@ -2,8 +2,9 @@
 
 # 🌤️ WeatherNow — Weather Forecast Web App
 
-A dynamic **weather website** built with **Node.js**, **Express**, and **Handlebars (hbs)**.  
-It uses **Mapbox Geocoding** to convert an address to coordinates, then fetches weather data from **OpenWeatherMap**.
+A dynamic **weather web app** built with **Node.js**, **Express**, and **Handlebars (hbs)**.  
+**Learning project** focused on consuming external APIs: **Mapbox Geocoding** (address → coordinates) and **OpenWeatherMap** (live weather).  
+Emphasis on clean routing, input validation, and user-friendly error messages.
 
 <br/>
 
@@ -49,6 +50,7 @@ It uses **Mapbox Geocoding** to convert an address to coordinates, then fetches 
 | Geocoding | Mapbox API |
 | Weather | OpenWeatherMap API |
 | Frontend | HTML/CSS/JS (static in `public/`) |
+> **Note:** This project currently uses `request` (legacy). A migration to `fetch`/`axios` is planned.
 
 ---
 
@@ -152,6 +154,12 @@ Server default:
 ```bash
 curl "http://localhost:3000/weather?address=Berlin"
 ```
+
+---
+
+## Error handling
+- Handles missing/invalid address input
+- Shows user-friendly messages for API/network errors
 
 ---
 
